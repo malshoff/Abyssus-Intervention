@@ -68,6 +68,7 @@ static HANDLE g_hSwapChainWaitableObject = nullptr;
 // static ID3D12Resource*              g_mainRenderTargetResource[NUM_BACK_BUFFERS] = {}; // Original
 // static D3D12_CPU_DESCRIPTOR_HANDLE  g_mainRenderTargetDescriptor[NUM_BACK_BUFFERS] = {}; // Original
 static UINT g_ResizeWidth = 0, g_ResizeHeight = 0;
+static bool g_AppMinimized = false;
 
 bool bShould_render = true;
 
@@ -143,11 +144,23 @@ extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam
 
 LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+    // Track minimize/restore to avoid rendering while minimized
+    switch (uMsg)
+    {
+    case WM_SIZE:
+        if (wParam == SIZE_MINIMIZED) g_AppMinimized = true; else g_AppMinimized = false;
+        break;
+    case WM_ACTIVATEAPP:
+        if (wParam == FALSE) g_AppMinimized = true; else g_AppMinimized = false;
+        break;
+    default: break;
+    }
+
     // Let ImGui process first
     if (ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam))
         return true;
 
-    // Minimal swallowing: only mouse buttons/wheel while menu is open.
+    // Minimal swallowing: only mouse buttons/wheel while menu is open
     if (CheatMenu::IsVisible())
     {
         switch (uMsg)
@@ -318,6 +331,12 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     if (GetAsyncKeyState(VK_INSERT) & 1)
         CheatMenu::Toggle();
 
+    // If minimized or occluded, skip overlay work to avoid deadlocks on restore
+    if (g_AppMinimized)
+    {
+        return oPresent(pSwapChain, SyncInterval, Flags);
+    }
+
     // Begin new frame
     ImGui_ImplDX12_NewFrame();
     ImGui_ImplWin32_NewFrame();
@@ -326,15 +345,11 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     // Ensure ImGui captures mouse/keyboard when hovering widgets
     ImGuiIO& io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    io.ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange; // prevent system cursor flicker on exit
     io.MouseDrawCursor = CheatMenu::IsVisible();
 
     // Render menu
     CheatMenu::Render();
-
-    // If menu is open and IO wants capture, block game input at controller too (belt and suspenders)
-    if (CheatMenu::IsVisible()) {
-        // Optional: could also set controller ignores here, but we already do in Toggle()
-    }
 
     // Get current back buffer
     UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();

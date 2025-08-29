@@ -29,6 +29,7 @@ static ID3D11RenderTargetView* g_mainRenderTargetView = nullptr;
 static IDXGISwapChain*         g_swapChain11 = nullptr;
 static HWND                    g_hWnd11 = nullptr;
 static WNDPROC                 g_oWndProc11 = nullptr;
+static bool                    g_AppMinimized11 = false;
 
 static void CreateRenderTarget11()
 {
@@ -52,6 +53,17 @@ static void CleanupRenderTarget11()
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 static LRESULT APIENTRY WndProc11(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
+    switch (uMsg)
+    {
+    case WM_SIZE:
+        if (wParam == SIZE_MINIMIZED) g_AppMinimized11 = true; else g_AppMinimized11 = false;
+        break;
+    case WM_ACTIVATEAPP:
+        if (wParam == FALSE) g_AppMinimized11 = true; else g_AppMinimized11 = false;
+        break;
+    default: break;
+    }
+
     if (ImGui_ImplWin32_WndProcHandler(hwnd, uMsg, wParam, lParam))
         return true;
 
@@ -119,12 +131,19 @@ static HRESULT __stdcall hkPresent11(IDXGISwapChain* pSwap, UINT SyncInterval, U
     if (GetAsyncKeyState(VK_INSERT) & 1)
         CheatMenu::Toggle();
 
+    // If minimized, skip overlay to avoid device/state issues after alt-tab
+    if (g_AppMinimized11)
+    {
+        return oPresent11(pSwap, SyncInterval, Flags);
+    }
+
     // New ImGui frame
     ImGui_ImplDX11_NewFrame();
     ImGui_ImplWin32_NewFrame();
     ImGui::NewFrame();
 
     ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange; // prevent system cursor flicker on exit
     io.MouseDrawCursor = CheatMenu::IsVisible();
 
     CheatMenu::Render();

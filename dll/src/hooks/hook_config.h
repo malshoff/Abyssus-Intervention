@@ -8,6 +8,6 @@ namespace Hook {
 
     // Global toggle to force a specific graphics backend hook.
     // Set this before initialization in dllmain.
-    inline Backend g_ForceBackend = Backend::D3D11; // Change to Backend::D3D11 to force DX11
+    inline Backend g_ForceBackend = Backend::D3D12; // Change to Backend::D3D11 to force DX11
 }
 
