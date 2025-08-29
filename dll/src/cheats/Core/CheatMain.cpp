@@ -24,7 +24,7 @@ namespace Cheat {
             }
 
             LOG_INFO("Initializing cheat system (deferred-ready)...");
-
+            std::cout << "Command line args: " << SDK::UKismetSystemLibrary::GetCommandLineW().ToString();
             // Initialize centralized configuration
             Config::Initialize();
 

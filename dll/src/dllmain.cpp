@@ -6,6 +6,7 @@
 #include <dev/Console.h>
 #include <dev/logger.h>
 
+
 namespace Hook
 {
     static bool g_cleanup_done = false;
@@ -44,8 +45,28 @@ namespace Hook
     bool Initialize()
     {
         using Hook::Backend;
-        LOG_INFO("Initializing hooks (forced backend)...");
+        LOG_INFO("Initializing hooks (command-line override -> forced backend)...");
 
+        // Command-line override: check for dx11/dx12 flags
+        try {
+            auto cmd = SDK::UKismetSystemLibrary::GetCommandLineW().ToString();
+            std::string cmdA(cmd.begin(), cmd.end());
+            std::string cmdLower = cmdA; for (auto& c : cmdLower) c = (char)tolower(c);
+            if (cmdLower.find("dx11") != std::string::npos) {
+                LOG_INFO("Command line override: forcing D3D11 hook");
+                if (!InitD3D11Hook()) { LOG_ERROR("Failed to initialize DirectX 11 hook (cmd)"); return false; }
+                return true;
+            }
+            if (cmdLower.find("dx12") != std::string::npos) {
+                LOG_INFO("Command line override: forcing D3D12 hook");
+                if (!InitD3D12Hook()) { LOG_ERROR("Failed to initialize DirectX 12 hook (cmd)"); return false; }
+                return true;
+            }
+        } catch (...) {
+            LOG_WARN("Failed to read command line for backend override; falling back to forced backend");
+        }
+
+        // Fallback to global forced backend
         if (Hook::g_ForceBackend == Backend::D3D12)
         {
             LOG_INFO("Forcing D3D12 hook");
