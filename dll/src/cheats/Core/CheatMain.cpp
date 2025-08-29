@@ -16,22 +16,22 @@ std::mutex list_mutex;
 
 namespace Cheat {
     namespace Core {
-        
+
         bool CheatMain::Initialize() {
             if (Config::System::Initialized) {
                 LOG_INFO("CheatMain already initialized");
                 return true;
             }
 
-            LOG_INFO("Initializing cheat system...");
+            LOG_INFO("Initializing cheat system (deferred-ready)...");
 
             // Initialize centralized configuration
             Config::Initialize();
 
-            // Initialize game connection
+            // Do not force SDK readiness here — allow Update() to bring us live when the world exists
             if (!UpdateSDK(true)) {
-                LOG_ERROR("Failed to initialize game connection");
-                return false;
+                LOG_WARN("Game world not ready yet; will finalize initialization in Update()");
+                return true; // Not a hard failure; we'll finish init later
             }
 
             // Initialize subsystems
@@ -50,7 +50,21 @@ namespace Cheat {
         }
         
         void CheatMain::Update(DWORD tick) {
+            // Lazy initialize when the game world is ready (allows injection at main menu)
             if (!Config::System::Initialized) {
+                static DWORD s_lastInitAttempt = 0;
+                DWORD now = GetTickCount();
+                // Throttle attempts to avoid log spam
+                if (now - s_lastInitAttempt > 500) {
+                    s_lastInitAttempt = now;
+                    if (UpdateSDK(false)) {
+                        if (InitializeSubsystems()) {
+                            Config::System::LastFrameTime = now;
+                            Config::System::Initialized = true;
+                            LOG_INFO("Cheat system initialized in-game");
+                        }
+                    }
+                }
                 return;
             }
 
@@ -146,36 +160,37 @@ namespace Cheat {
         }
 
         bool CheatMain::InitializeSubsystems() {
-            // Always initialize console and cheat manager - it's required for many cheats
-            if (auto* controller = Cheat::Services::GameServices::GetPlayerController()) {
-                if (!Utils::Console::EnableCheatManager(controller)) {
-                    LOG_INFO("Failed to enable cheat manager - will retry during updates");
-                } else {
-                    LOG_INFO("CheatManager enabled successfully at startup");
-                }
+            // Only proceed if controller and pawn are ready; otherwise defer
+            auto* controller = Cheat::Services::GameServices::GetPlayerController();
+            auto* pawn = Cheat::Services::GameServices::GetRPlayerPawn();
+            if (!controller || !pawn) {
+                LOG_WARN("Subsystems deferred: controller/pawn not ready");
+                return false;
             }
 
-            // Initialize aimbot system
+            // Enable cheat manager (best-effort)
+            if (!Utils::Console::EnableCheatManager(controller)) {
+                LOG_INFO("Failed to enable cheat manager - will retry during updates");
+            } else {
+                LOG_INFO("CheatManager enabled successfully at startup");
+            }
+
+            // Initialize subsystems that rely on in-game state
             Services::AimbotService::Initialize();
-
-            // Initialize bone analyzer system
             Services::BoneService::Initialize();
-
-            // Initialize weapon service
             Services::WeaponService::Initialize();
 
             return true;
         }
-        
+
         void CheatMain::ProcessInput() {
+            // Safe-guard: only allow operations when world is valid
+            auto* world = Cheat::Services::GameServices::GetWorld();
+            if (!world) return;
 
             // Handle dump enemy bones key
             if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
-                Services::BoneService::DumpUniqueEnemyBones(Cheat::Services::GameServices::GetWorld());
-                // Services::BoneService::DumpPlayerBones(Cheat::Services::GameServices::GetRPlayerPawn());
-               
-
-
+                Services::BoneService::DumpUniqueEnemyBones(world);
             }
 
             // Handle display bone database key
@@ -190,8 +205,13 @@ namespace Cheat {
         }
 
         void CheatMain::UpdateSubsystems(float deltaTime) {
+            // Only update when controller/pawn are ready
+            auto* controller = Cheat::Services::GameServices::GetPlayerController();
+            auto* pawn = Cheat::Services::GameServices::GetRPlayerPawn();
+            if (!controller || !pawn) return;
+
             // Update cheat toggles (God Mode, Speed Hack, etc.)
-            Cheat::Services::PlayerEffectsService::Update(Cheat::Services::GameServices::GetPlayerController());
+            Cheat::Services::PlayerEffectsService::Update(controller);
 
             // Update weapon service
             Services::WeaponService::Update();

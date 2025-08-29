@@ -3,6 +3,7 @@
 #include "../SDK/Engine_classes.hpp"
 #include "../SDK/RGame_classes.hpp"
 #include "../SDK/BP_EngineRifle_Script_classes.hpp"
+#include "../SDK/BP_MainMenuPawn_classes.hpp"
 #include "../Core/Config.h"
 
 namespace Cheat {

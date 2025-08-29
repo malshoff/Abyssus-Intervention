@@ -9,7 +9,10 @@ bool GameServices::Refresh(bool log) {
     // World
     s_world = SDK::UWorld::GetWorld();
     if (!s_world || !s_world->GameState) {
-        if (log) std::cerr << "Error: World not found" << std::endl;
+        if (log) std::cerr << "World not ready" << std::endl;
+        // reset cached pointers for consistency when out of game
+        s_engine = nullptr; s_controller = nullptr; s_pawn = nullptr; s_rpawn = nullptr;
+        s_weapon = nullptr; s_weaponScript = nullptr; s_engineRifleScript = nullptr; s_isEngineRifle = false;
         return false;
     }
     if (log) {
@@ -34,7 +37,14 @@ bool GameServices::Refresh(bool log) {
         }
         if (s_controller) {
             s_pawn = s_controller->K2_GetPawn();
-            s_rpawn = static_cast<SDK::ARPlayerPawn*>(s_pawn);
+
+            // If the pawn is the main menu pawn, treat as out-of-game and clear RPlayerPawn
+            if (s_pawn && s_pawn->IsA(SDK::ABP_MainMenuPawn_C::StaticClass())) {
+                s_rpawn = nullptr;
+            } else {
+                s_rpawn = static_cast<SDK::ARPlayerPawn*>(s_pawn);
+            }
+
             if (log) {
                 std::cout << "MyPawn address: 0x" << std::hex << reinterpret_cast<uintptr_t>(s_pawn) << std::dec << std::endl;
                 if (s_pawn) {
