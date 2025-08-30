@@ -152,6 +152,11 @@ bool TargetSelector::IsValidTarget(SDK::AActor* actor) {
     return true;
 }
 
+// Public wrapper
+bool TargetSelector::ValidateTarget(SDK::AActor* actor) {
+    return IsValidTarget(actor);
+}
+
 
 
 SDK::FVector TargetSelector::GetBoneBasedAimPoint(SDK::AActor* targetActor, int& outBoneIndex, std::string& outBoneName) {

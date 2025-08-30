@@ -11,7 +11,7 @@
 #include "Tabs/OptionsTab.h"
 #include "Tabs/UnlocksTab.h"
 #include "Tabs/DebugTab.h"
-#include <cheats/Features/WeaponService.h>
+#include "../cheats/Services/WeaponService.h"
 #include "../cheats/Services/GameServices.h"
 #include "../dev/imgui/IconsFontAwesome5.h"
 

@@ -3,6 +3,7 @@
 #include "../Services/WeaponService.h"
 #include "../Services/AimbotService.h"
 #include "../Services/BoneService.h"
+#include "../Services/ESPService.h"
 #include "../Utils/Console.h"
 #include "../Utils/Input.h"
 #include "../Services/GameServices.h"
@@ -179,6 +180,7 @@ namespace Cheat {
             Services::AimbotService::Initialize();
             Services::BoneService::Initialize();
             Services::WeaponService::Initialize();
+            Services::ESPService::Initialize();
 
             return true;
         }
@@ -218,7 +220,10 @@ namespace Cheat {
 
             // Update aimbot system
             Services::AimbotService::Update(deltaTime);
+
+            // Draw ESP boxes each frame after we have targets list
+            Services::ESPService::Update();
         }
-        
+
     } // namespace Core
 } // namespace Cheat

@@ -12,6 +12,9 @@ public:
     static TargetInfo GetBestTarget(SDK::UWorld* world,
                                     SDK::APlayerController* controller,
                                     SDK::ARPlayerPawn* pawn);
+
+    // Public helper mirroring TargetSelector validity check for reuse in ESP, etc.
+    static bool IsValidTarget(SDK::AActor* actor);
 };
 
 } } // namespace Cheat::Services

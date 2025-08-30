@@ -55,6 +55,7 @@ add_library(${DLL_NAME} SHARED
     src/cheats/Services/UnlockService.cpp
     src/cheats/Services/SaveService.cpp
     src/cheats/Services/ResourceService.cpp
+    src/cheats/Services/ESPService.cpp
 
     # GUI
     src/gui/CheatMenu.cpp

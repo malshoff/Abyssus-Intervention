@@ -9,5 +9,10 @@ TargetInfo TargetingService::GetBestTarget(SDK::UWorld* world,
     return TargetSelector::SelectBestTarget(world, controller, pawn);
 }
 
+bool TargetingService::IsValidTarget(SDK::AActor* actor) {
+    // Forward to the internal selector's validation
+    return TargetSelector::ValidateTarget(actor);
+}
+
 } } // namespace Cheat::Services
 
