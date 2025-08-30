@@ -126,18 +126,19 @@ void CleanupRenderTarget()
 
 void WaitForLastSubmittedFrame()
 {
-    FrameContext *frameCtx = &g_frameContext[g_frameIndex % NUM_FRAMES_IN_FLIGHT];
-
-    UINT64 fenceValue = frameCtx->FenceValue;
-    if (fenceValue == 0)
-        return; // No fence was signaled
-
-    frameCtx->FenceValue = 0;
-    if (g_fence->GetCompletedValue() >= fenceValue)
+    // Flush the GPU using our own fence to ensure all work on the queue is complete.
+    if (!g_pd3dCommandQueue || !g_fence || !g_fenceEvent)
         return;
 
-    g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
-    WaitForSingleObject(g_fenceEvent, INFINITE);
+    const UINT64 fenceValue = ++g_fenceLastSignaledValue;
+    if (SUCCEEDED(g_pd3dCommandQueue->Signal(g_fence, fenceValue)))
+    {
+        if (g_fence->GetCompletedValue() < fenceValue)
+        {
+            g_fence->SetEventOnCompletion(fenceValue, g_fenceEvent);
+            WaitForSingleObject(g_fenceEvent, INFINITE);
+        }
+    }
 }
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -455,13 +456,8 @@ HRESULT __fastcall hkResizeBuffers(IDXGISwapChain3 *pSwapChain, UINT BufferCount
 
 HRESULT __fastcall hkSignal(ID3D12CommandQueue *queue, ID3D12Fence *fence, UINT64 value)
 {
-    if (g_pd3dCommandQueue != nullptr && queue == g_pd3dCommandQueue)
-    {
-        g_fence = fence;
-        g_fenceValue = value;
-    }
+    // Do not steal or overwrite the game's fence. Just forward the call.
     return oSignal(queue, fence, value);
-    ;
 }
 
 bool InitD3D12Hook()
@@ -562,16 +558,19 @@ void ReleaseD3D12Hook()
     // Clean up render targets
     CleanupRenderTarget();
 
-    // Release command allocators
+    // Release command allocators (avoid double-releasing shared allocator)
     if (g_frameContext)
     {
+        ID3D12CommandAllocator *releasedAllocator = nullptr;
         for (UINT i = 0; i < NUM_BACK_BUFFERS; i++)
         {
-            if (g_frameContext[i].CommandAllocator)
+            ID3D12CommandAllocator *alloc = g_frameContext[i].CommandAllocator;
+            if (alloc && alloc != releasedAllocator)
             {
-                g_frameContext[i].CommandAllocator->Release();
-                g_frameContext[i].CommandAllocator = nullptr;
+                alloc->Release();
+                releasedAllocator = alloc;
             }
+            g_frameContext[i].CommandAllocator = nullptr;
         }
         delete[] g_frameContext;
         g_frameContext = nullptr;
@@ -583,11 +582,8 @@ void ReleaseD3D12Hook()
         g_pd3dCommandList = nullptr;
     }
 
-    if (g_pd3dCommandQueue)
-    {
-        g_pd3dCommandQueue->Release();
-        g_pd3dCommandQueue = nullptr;
-    }
+    // Do not release the game's command queue; we did not AddRef it.
+    g_pd3dCommandQueue = nullptr;
 
     // Close handles before releasing resources
     if (g_fenceEvent)
