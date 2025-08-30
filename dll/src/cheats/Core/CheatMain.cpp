@@ -15,11 +15,15 @@
 // Mutex for thread-safe target list access (global scope)
 std::mutex list_mutex;
 
-namespace Cheat {
-    namespace Core {
+namespace Cheat
+{
+    namespace Core
+    {
 
-        bool CheatMain::Initialize() {
-            if (Config::System::Initialized) {
+        bool CheatMain::Initialize()
+        {
+            if (Config::System::Initialized)
+            {
                 LOG_INFO("CheatMain already initialized");
                 return true;
             }
@@ -30,13 +34,15 @@ namespace Cheat {
             Config::Initialize();
 
             // Do not force SDK readiness here — allow Update() to bring us live when the world exists
-            if (!UpdateSDK(true)) {
+            if (!UpdateSDK(true))
+            {
                 LOG_WARN("Game world not ready yet; will finalize initialization in Update()");
                 return true; // Not a hard failure; we'll finish init later
             }
 
             // Initialize subsystems
-            if (!InitializeSubsystems()) {
+            if (!InitializeSubsystems())
+            {
                 LOG_ERROR("Failed to initialize subsystems");
                 return false;
             }
@@ -49,17 +55,22 @@ namespace Cheat {
 
             return true;
         }
-        
-        void CheatMain::Update(DWORD tick) {
+
+        void CheatMain::Update(DWORD tick)
+        {
             // Lazy initialize when the game world is ready (allows injection at main menu)
-            if (!Config::System::Initialized) {
+            if (!Config::System::Initialized)
+            {
                 static DWORD s_lastInitAttempt = 0;
                 DWORD now = GetTickCount();
                 // Throttle attempts to avoid log spam
-                if (now - s_lastInitAttempt > 500) {
+                if (now - s_lastInitAttempt > 500)
+                {
                     s_lastInitAttempt = now;
-                    if (UpdateSDK(false)) {
-                        if (InitializeSubsystems()) {
+                    if (UpdateSDK(false))
+                    {
+                        if (InitializeSubsystems())
+                        {
                             Config::System::LastFrameTime = now;
                             Config::System::Initialized = true;
                             LOG_INFO("Cheat system initialized in-game");
@@ -70,7 +81,8 @@ namespace Cheat {
             }
 
             // Update SDK without logging each frame
-            if (!UpdateSDK(false)) {
+            if (!UpdateSDK(false))
+            {
                 return;
             }
 
@@ -86,16 +98,44 @@ namespace Cheat {
             UpdateSubsystems(deltaTime);
             Config::System::LastFrameTime = currentTime;
         }
-        
-        void CheatMain::Shutdown() {
-            if (!Config::System::Initialized) {
+
+        void CheatMain::Shutdown()
+        {
+            if (!Config::System::Initialized)
+            {
                 return;
             }
 
             LOG_INFO("Shutting down cheat system...");
 
-            // Shutdown subsystems
+            // Disable all cheat toggles instead of trying to restore originals
+            Config::Aimbot::enabled = false;
+            Config::Visuals::ESPEnabled = false;
+            Config::Features::GodMode = false;
+            Config::Features::SpeedHack = false;
+            Config::Features::NoHeatBuildup = false;
+            Config::Features::AutoCheatManager = false;
+            Config::Features::SlowImmunity = false;
+            Config::Features::JumpHeightHack = false;
+            Config::Features::DashSpeedHack = false;
+            Config::Features::InfiniteAmmo = false;
+            Config::Features::IncreasedDamage = false;
+            Config::Features::HighCritMultiplier = false;
+            Config::Features::NoCooldown = false;
+            Config::Features::NoRecoil = false;
+            Config::Features::InstantReload = false;
+            Config::Features::RateOfFireOverride = false;
+
+            // Shutdown subsystems (no restoration side-effects)
             Services::AimbotService::Shutdown();
+            Services::WeaponService::Shutdown();
+            Services::ESPService::Shutdown();
+            Services::BoneService::Shutdown();
+            Cheat::Services::PlayerEffectsService::Shutdown();
+
+            // Reset flags for next run
+            Config::Features::OriginalSpeedsSaved = false;
+            Config::Features::OriginalMovementValuesSaved = false;
 
             Config::System::Initialized = false;
             Config::System::ShouldExit = false;
@@ -103,55 +143,63 @@ namespace Cheat {
 
             LOG_INFO("Cheat system shutdown complete");
         }
-        
-        bool CheatMain::UpdateSDK(bool log) {
+
+        bool CheatMain::UpdateSDK(bool log)
+        {
             // Delegate to GameServices facade; it also updates legacy Config::GameState during transition
             return Cheat::Services::GameServices::Refresh(log);
         }
-        
-        void CheatMain::FetchFromActors(std::vector<SDK::AActor*>* list) {
+
+        void CheatMain::FetchFromActors(std::vector<SDK::AActor *> *list)
+        {
             auto world = Cheat::Services::GameServices::GetWorld();
             if (!world || world->Levels.Num() == 0)
                 return;
 
-            SDK::ULevel* currLevel = world->Levels[0];
+            SDK::ULevel *currLevel = world->Levels[0];
             if (!currLevel)
                 return;
 
             list->clear();
 
-            for (int j = 0; j < currLevel->Actors.Num(); j++) {
-                SDK::AActor* currActor = currLevel->Actors[j];
+            for (int j = 0; j < currLevel->Actors.Num(); j++)
+            {
+                SDK::AActor *currActor = currLevel->Actors[j];
 
                 if (!currActor)
                     continue;
-                if(currActor->IsA(SDK::ARPlayerPawn::StaticClass())) 
+                if (currActor->IsA(SDK::ARPlayerPawn::StaticClass()))
                     continue;
-                
 
                 // Check for enemy pawns (adjust class name as needed for your game)
-                if (currActor->IsA(SDK::AREnemyPawnBase::StaticClass())) {
+                if (currActor->IsA(SDK::AREnemyPawnBase::StaticClass()))
+                {
                     list->push_back(currActor);
                 }
             }
         }
 
-        void CheatMain::FetchEntities() {
+        void CheatMain::FetchEntities()
+        {
             auto world = Cheat::Services::GameServices::GetWorld();
             auto controller = Cheat::Services::GameServices::GetPlayerController();
             auto pawn = Cheat::Services::GameServices::GetPlayerPawn();
-            if (!world || !controller || !pawn) {
+            if (!world || !controller || !pawn)
+            {
                 return;
             }
 
-            if (!world->GameState) {
+            if (!world->GameState)
+            {
                 return;
             }
 
-            std::vector<SDK::AActor*> newTargets;
-            if (world->Levels.Num() == 0) return;
-            SDK::ULevel* currLevel = world->Levels[0];
-            if (!currLevel) return;
+            std::vector<SDK::AActor *> newTargets;
+            if (world->Levels.Num() == 0)
+                return;
+            SDK::ULevel *currLevel = world->Levels[0];
+            if (!currLevel)
+                return;
             FetchFromActors(&newTargets);
 
             {
@@ -160,19 +208,24 @@ namespace Cheat {
             }
         }
 
-        bool CheatMain::InitializeSubsystems() {
+        bool CheatMain::InitializeSubsystems()
+        {
             // Only proceed if controller and pawn are ready; otherwise defer
-            auto* controller = Cheat::Services::GameServices::GetPlayerController();
-            auto* pawn = Cheat::Services::GameServices::GetRPlayerPawn();
-            if (!controller || !pawn) {
+            auto *controller = Cheat::Services::GameServices::GetPlayerController();
+            auto *pawn = Cheat::Services::GameServices::GetRPlayerPawn();
+            if (!controller || !pawn)
+            {
                 LOG_WARN("Subsystems deferred: controller/pawn not ready");
                 return false;
             }
 
             // Enable cheat manager (best-effort)
-            if (!Utils::Console::EnableCheatManager(controller)) {
+            if (!Utils::Console::EnableCheatManager(controller))
+            {
                 LOG_INFO("Failed to enable cheat manager - will retry during updates");
-            } else {
+            }
+            else
+            {
                 LOG_INFO("CheatManager enabled successfully at startup");
             }
 
@@ -185,32 +238,39 @@ namespace Cheat {
             return true;
         }
 
-        void CheatMain::ProcessInput() {
+        void CheatMain::ProcessInput()
+        {
             // Safe-guard: only allow operations when world is valid
-            auto* world = Cheat::Services::GameServices::GetWorld();
-            if (!world) return;
+            auto *world = Cheat::Services::GameServices::GetWorld();
+            if (!world)
+                return;
 
             // Handle dump enemy bones key
-            if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones)) {
+            if (Utils::Input::IsKeyPressed(Config::Hotkeys::DumpBones))
+            {
                 Services::BoneService::DumpUniqueEnemyBones(world);
             }
 
             // Handle display bone database key
-            if (Utils::Input::IsKeyPressed(Config::Hotkeys::ShowBoneDB)) {
+            if (Utils::Input::IsKeyPressed(Config::Hotkeys::ShowBoneDB))
+            {
                 Services::BoneService::DisplayBoneDatabase();
             }
 
             // Handle log weapon stats key
-            if (Utils::Input::IsKeyPressed(Config::Hotkeys::LogWeaponStats)) {
+            if (Utils::Input::IsKeyPressed(Config::Hotkeys::LogWeaponStats))
+            {
                 Services::WeaponService::LogAllWeaponStats();
             }
         }
 
-        void CheatMain::UpdateSubsystems(float deltaTime) {
+        void CheatMain::UpdateSubsystems(float deltaTime)
+        {
             // Only update when controller/pawn are ready
-            auto* controller = Cheat::Services::GameServices::GetPlayerController();
-            auto* pawn = Cheat::Services::GameServices::GetRPlayerPawn();
-            if (!controller || !pawn) return;
+            auto *controller = Cheat::Services::GameServices::GetPlayerController();
+            auto *pawn = Cheat::Services::GameServices::GetRPlayerPawn();
+            if (!controller || !pawn)
+                return;
 
             // Update cheat toggles (God Mode, Speed Hack, etc.)
             Cheat::Services::PlayerEffectsService::Update(controller);

@@ -4,15 +4,19 @@
 #include "../SDK/RGame_classes.hpp"
 #include "../Core/Config.h"
 
-namespace Cheat {
-namespace Services {
+namespace Cheat
+{
+    namespace Services
+    {
 
-class PlayerEffectsService {
-public:
-    // Apply gameplay effects such as God Mode, Speed Hack, Movement hacks; ensure CheatManager if needed
-    static void Update(SDK::APlayerController* playerController);
-};
+        class PlayerEffectsService
+        {
+        public:
+            // Apply gameplay effects such as God Mode, Speed Hack, Movement hacks; ensure CheatManager if needed
+            static void Update(SDK::APlayerController *playerController);
+            // Restore all modified player/movement values back to originals
+            static void Shutdown();
+        };
 
-} // namespace Services
+    } // namespace Services
 } // namespace Cheat
-
