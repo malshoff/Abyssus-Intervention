@@ -51,10 +51,20 @@ namespace Cheat {
             // Aim zones
             AimZones aimZones;
 
+            // Aim target selection default
+            AimTarget aimTarget = AimTarget::Bones;
+            // Initial vertical aim offset
+            float aimVerticalOffset = 0.0f;
+
+
             // Visual settings
             Color fovColor = {1.0f, 1.0f, 1.0f, 0.3f};
             Color enemyColor = {1.0f, 0.0f, 0.0f, 1.0f};
             Color targetColor = {0.0f, 1.0f, 0.0f, 1.0f};
+        }
+
+        namespace Visuals {
+            bool ESPEnabled = true;
         }
 
         // =============================================================================

@@ -24,7 +24,7 @@ struct TargetInfo {
 
 namespace Cheat {
     namespace Config {
-        
+
         // =============================================================================
         // HOTKEY CONFIGURATION
         // =============================================================================
@@ -54,7 +54,7 @@ namespace Cheat {
         namespace GUI {
             extern float Scale;                              // GUI scale multiplier (1.0 = normal, 2.0 = double size)
         }
-        
+
         // =============================================================================
         // RUNTIME STATE (targeting-only, moved core object pointers to Services::GameServices)
         // =============================================================================
@@ -86,6 +86,15 @@ namespace Cheat {
             extern float targetSwitchDelay;
             extern float maxAimSnapDistance;
 
+            // Aim target selection
+            enum class AimTarget : int { Bones = 0, Center = 1 };
+            extern AimTarget aimTarget;
+
+
+            // User-tunable vertical aim offset (world Z units, positive aims higher)
+            extern float aimVerticalOffset;
+
+
 
             // Aim zones (priority order)
             struct AimZones {
@@ -99,11 +108,19 @@ namespace Cheat {
             struct Color {
                 float r, g, b, a;
             };
+
             extern Color fovColor;
             extern Color enemyColor;
             extern Color targetColor;
         }
-        
+
+        // =============================================================================
+        // VISUALS (ESP etc.)
+        // =============================================================================
+        namespace Visuals {
+            extern bool ESPEnabled;
+        }
+
         // =============================================================================
         // DEBUG SETTINGS
         // =============================================================================
@@ -157,7 +174,7 @@ namespace Cheat {
             extern bool RateOfFireOverride;    // Use RateOfFireValue instead of original/fast toggle
             extern float RateOfFireValue;      // Desired rate of fire within MinMaxRange
         }
-        
+
         // =============================================================================
         // SYSTEM STATE
         // =============================================================================
@@ -167,22 +184,22 @@ namespace Cheat {
             inline static DWORD LastFrameTime = 0;
             inline static DWORD LastPrintTime = 0;
         }
-        
+
         // =============================================================================
         // CONFIGURATION FUNCTIONS
         // =============================================================================
-        
+
         // Initialize all configuration values
         void Initialize();
-        
+
         // Print current configuration to console
         void PrintConfiguration();
-        
+
         // Update game state references
         void UpdateGameState();
-        
+
         // Clear all game state references
         void ClearGameState();
-        
+
     } // namespace Config
 } // namespace Cheat

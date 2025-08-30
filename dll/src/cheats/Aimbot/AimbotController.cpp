@@ -149,17 +149,19 @@ void AimbotController::ProcessAiming(SDK::UWorld* world,
         Cheat::Config::GameState::g_CurrentTargetInfo = newTarget;
         Cheat::Config::GameState::g_pCurrentTarget = newTarget.actor;
 
-        // For bone-based targeting, we can use the precise bone location directly
         SDK::FVector targetPosition = Cheat::Config::GameState::g_CurrentTargetInfo.aimPoint;
         
-        // Calculate aim rotation
-        SDK::FVector directionToTarget = Math::Normalize(Math::Subtract(targetPosition, playerLocation));
-        SDK::FRotator targetRotation = Math::VectorToRotation(directionToTarget);
+        // Calculate aim rotation from camera to aim point to account for elevation & distance
+        SDK::FVector cameraPos; SDK::FRotator cameraRot;
+        playerController->GetActorEyesViewPoint(&cameraPos, &cameraRot);
+        // Apply user-configurable vertical offset (world Z axis)
+        targetPosition.Z += Cheat::Config::Aimbot::aimVerticalOffset;
+        SDK::FRotator targetRotation = Math::CalculateLookAtRotation(cameraPos, targetPosition);
         SDK::FRotator currentRotation = playerController->K2_GetActorRotation();
-        
+
         // Calculate angular distance (used later)
         float angularDistance = Math::GetAngleBetweenRotations(currentRotation, targetRotation);
-        
+
 if (Cheat::Config::Aimbot::smoothEnabled) {
 
             ApplySmoothing(playerController, targetRotation, deltaTime, shouldLogDetailed);

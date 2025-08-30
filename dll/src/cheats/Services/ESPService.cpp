@@ -17,7 +17,17 @@ static float kLineThickness = 1.0f;
 static bool kFilled = false;
 static float kFilledAlpha = 0.25f;
 
-static void Draw2DBoxFromCapsule(SDK::AActor* actor, SDK::APlayerController* controller) {
+static bool IsActorVisible(SDK::AActor* actor, SDK::APlayerController* controller) {
+    if (!actor || !controller) return false;
+    SDK::FVector cameraLocation;
+    SDK::FRotator cameraRotation;
+    controller->GetActorEyesViewPoint(&cameraLocation, &cameraRotation);
+    SDK::APawn* targetPawn = static_cast<SDK::APawn*>(actor);
+    if (!targetPawn) return false;
+    return controller->LineOfSightTo(targetPawn, cameraLocation, false);
+}
+
+static void Draw2DBoxFromCapsule(SDK::AActor* actor, SDK::APlayerController* controller, const ImColor& color) {
     if (!actor || !controller) return;
 
     // Validate enemy
@@ -67,6 +77,18 @@ static void Draw2DBoxFromCapsule(SDK::AActor* actor, SDK::APlayerController* con
     ImVec2 minP(headScreen.X - halfWidth, headScreen.Y);
     ImVec2 maxP(headScreen.X + halfWidth, feetScreen.Y);
 
+    // Clip to screen bounds (avoid std::min/max because of Windows macros)
+    ImGuiIO& io = ImGui::GetIO();
+    float minX = 0.0f, minY = 0.0f;
+    float maxX = io.DisplaySize.x, maxY = io.DisplaySize.y;
+
+    if (minP.x < minX) minP.x = minX; else if (minP.x > maxX) minP.x = maxX;
+    if (minP.y < minY) minP.y = minY; else if (minP.y > maxY) minP.y = maxY;
+    if (maxP.x < minX) maxP.x = minX; else if (maxP.x > maxX) maxP.x = maxX;
+    if (maxP.y < minY) maxP.y = minY; else if (maxP.y > maxY) maxP.y = maxY;
+
+    if (minP.x >= maxP.x || minP.y >= maxP.y) return;
+
     ImDrawList* dl = ImGui::GetForegroundDrawList();
 
     if (kFilled) {
@@ -91,6 +113,8 @@ void ESPService::Update() {
     auto* world = Cheat::Services::GameServices::GetWorld();
     if (!world || !controller) return;
 
+    if (!Cheat::Config::Visuals::ESPEnabled) return;
+
     // Iterate current targets collected by CheatMain
     std::vector<SDK::AActor*> targets;
     {
@@ -102,7 +126,11 @@ void ESPService::Update() {
         if (!actor) continue;
         // Reuse TargetSelector validity check to filter
         if (!Cheat::Services::TargetingService::IsValidTarget(actor)) continue;
-        Draw2DBoxFromCapsule(actor, controller);
+
+        // Visibility-based color: red when visible, green when not visible
+        bool visible = IsActorVisible(actor, controller);
+        ImColor color = visible ? ImColor(255, 0, 0, 255) : ImColor(0, 255, 0, 255);
+        Draw2DBoxFromCapsule(actor, controller, color);
     }
 }
 

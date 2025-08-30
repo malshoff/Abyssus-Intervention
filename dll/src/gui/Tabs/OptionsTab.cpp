@@ -14,6 +14,11 @@ void OptionsTab() {
     ImGui::Text("%s  Interface", ICON_FA_SLIDERS_H);
     ImGui::Separator();
 
+    if (ImGui::Checkbox("ESP Enabled", &Cheat::Config::Visuals::ESPEnabled)) {
+        LOG_INFO("GUI: ESP %s", Cheat::Config::Visuals::ESPEnabled ? "ENABLED" : "DISABLED");
+    }
+    ImGui::Spacing();
+
     static float previousScale = Cheat::Config::GUI::Scale;
     if (ImGui::SliderFloat("GUI Scale", &Cheat::Config::GUI::Scale, 0.5f, 3.0f, "%.1fx")) {
         ImGuiIO& io = ImGui::GetIO();

@@ -28,6 +28,36 @@ void AimbotTab() {
     }
 
     ImGui::Spacing();
+    ImGui::Text("Aim Target");
+    int aimTarget = static_cast<int>(Cheat::Config::Aimbot::aimTarget);
+    const char* aimItems[] = { "bones", "center" };
+    if (ImGui::Combo("##aim_target_combo", &aimTarget, aimItems, IM_ARRAYSIZE(aimItems))) {
+        Cheat::Config::Aimbot::aimTarget = static_cast<Cheat::Config::Aimbot::AimTarget>(aimTarget);
+        LOG_INFO("GUI: Aimbot aim target set to %s", aimTarget == 0 ? "bones" : "center");
+    }
+
+    ImGui::Spacing();
+    ImGui::Text("Vertical Aim Offset");
+    ImGui::SameLine();
+    if (ImGui::SliderFloat("##aim_vert_offset", &Cheat::Config::Aimbot::aimVerticalOffset, -100.0f, 100.0f, "%.1f")) {
+        LOG_INFO("GUI: Aimbot vertical offset = %.1f", Cheat::Config::Aimbot::aimVerticalOffset);
+    }
+
+
+    ImGui::Spacing();
+    ImGui::Text("Smoothing");
+    if (ImGui::Checkbox("Enable Smoothing", &Cheat::Config::Aimbot::smoothEnabled)) {
+        LOG_INFO("GUI: Aimbot smoothing %s", Cheat::Config::Aimbot::smoothEnabled ? "ENABLED" : "DISABLED");
+    }
+    ImGui::SameLine();
+    ImGui::SetNextItemWidth(200.0f);
+    if (ImGui::SliderFloat("Amount##smoothing_amount", &Cheat::Config::Aimbot::maxTurnSpeed, 100.0f, 5000.0f, "%.0f")) {
+        LOG_INFO("GUI: Aimbot smoothing amount (max turn speed) = %.0f", Cheat::Config::Aimbot::maxTurnSpeed);
+    }
+
+
+
+    ImGui::Spacing();
     ImGui::Text("Hotkey Configuration");
     ImGui::Separator();
 

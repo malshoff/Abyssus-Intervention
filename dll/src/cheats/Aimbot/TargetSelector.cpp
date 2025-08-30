@@ -16,14 +16,14 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
                                            SDK::ARPlayerPawn* playerPawn) {
     TargetInfo bestTarget;
     float bestScore = FLT_MAX;
-    
+
     if (!world || !world->PersistentLevel || !playerController || !playerPawn) {
         return bestTarget;
     }
 
     SDK::FVector playerLocation = playerPawn->K2_GetActorLocation();
     SDK::FRotator controlRotation = playerController->K2_GetActorRotation();
-    
+
     // Use centralized target list populated by MainLoop
     std::vector<SDK::AActor*> currentTargets;
     {
@@ -44,13 +44,13 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         // Validate actor using the existing validity checker
         if (!actor || Validity::IsBadPoint(actor)) continue;
         if (!IsValidTarget(actor)) continue;
-        
+
         validActorsCount++;
-        
+
         TargetInfo targetInfo;
         targetInfo.actor = actor;
         targetInfo.position = actor->K2_GetActorLocation();
-        
+
         // Try to get bone-based aim point first
         targetInfo.aimPoint = GetBoneBasedAimPoint(actor, targetInfo.targetBoneIndex, targetInfo.targetBoneName);
         if (targetInfo.targetBoneIndex != -1) {
@@ -59,7 +59,21 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
             targetInfo.hasBoneTarget = false;
             targetInfo.aimPoint = GetTargetAimPoint(actor);
         }
-        
+
+        // Override aim point if user selected center of capsule
+        if (Cheat::Config::Aimbot::aimTarget == Cheat::Config::Aimbot::AimTarget::Center) {
+            if (auto enemyPawn = static_cast<SDK::AREnemyPawnBase*>(actor)) {
+                if (auto capsule = enemyPawn->CapsuleComponent) {
+                    SDK::FVector center = capsule->K2_GetComponentLocation();
+                    // small upward bias can help aim center mass slightly above center for visibility
+                    SDK::FVector up = capsule->GetUpVector();
+                    float hh = capsule->GetScaledCapsuleHalfHeight();
+                    targetInfo.aimPoint = center + up * (hh * 0.1f);
+                    targetInfo.hasBoneTarget = false;
+                }
+            }
+        }
+
         // Use built-in UE distance function
         targetInfo.distance = playerLocation.GetDistanceTo(targetInfo.position);
 
@@ -69,7 +83,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
             continue;
         }
 
-        
+
         // Calculate FOV distance using screen projection for more accurate prioritization
         SDK::FVector2D targetScreenPos;
         if (Math::WorldToScreen(targetInfo.aimPoint, &targetScreenPos, playerController)) {
@@ -78,7 +92,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         } else {
             continue; // Skip if we can't project to screen
         }
-        
+
         // Visibility check using LineOfSightTo
         if (Cheat::Config::Aimbot::visibilityCheck) {
             // Get camera position for more accurate LOS check
@@ -105,7 +119,7 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
         } else {
             targetInfo.isVisible = true;
         }
-        
+
         // Calculate priority score (lower is better)
         float score = CalculateTargetPriority(targetInfo, playerLocation);
 
@@ -113,12 +127,12 @@ TargetInfo TargetSelector::SelectBestTarget(SDK::UWorld* world,
             bestScore = score;
             bestTarget = targetInfo;
         }
-        
+
         finalValidCount++;
     }
-    
 
-    
+
+
     return bestTarget;
 }
 
@@ -162,26 +176,26 @@ bool TargetSelector::ValidateTarget(SDK::AActor* actor) {
 SDK::FVector TargetSelector::GetBoneBasedAimPoint(SDK::AActor* targetActor, int& outBoneIndex, std::string& outBoneName) {
     outBoneIndex = -1;
     outBoneName = "none";
-    
+
     if (!targetActor) {
         std::cout << "[TARGET_SELECTOR] GetBoneBasedAimPoint: actor is null" << std::endl;
         return SDK::FVector();
     }
-    
+
     // Check if it's an enemy pawn
     auto enemy = static_cast<SDK::AREnemyPawnBase*>(targetActor);
     if (!enemy) {
         std::cout << "[TARGET_SELECTOR] GetBoneBasedAimPoint: not an enemy pawn" << std::endl;
         return SDK::FVector();
     }
-    
+
     // Get the skeletal mesh component
     SDK::USkeletalMeshComponent* mesh = enemy->SkeletalMesh;
     if (!mesh) {
         std::cout << "[TARGET_SELECTOR] GetBoneBasedAimPoint: no skeletal mesh" << std::endl;
         return SDK::FVector();
     }
-    
+
     // Build enemy key for bone database lookup using the helper function
     std::string enemyKey = Cheat::Services::BoneService::BuildEnemyKey(enemy, mesh);
     if (enemyKey.empty()) {
@@ -218,11 +232,11 @@ SDK::FVector TargetSelector::GetBoneBasedAimPoint(SDK::AActor* targetActor, int&
 
     // Get the bone location using GetSocketLocation
     SDK::FVector boneLocation = mesh->GetSocketLocation(boneName);
-    
+
     // Set output parameters
     outBoneIndex = targetBoneIndex;
     outBoneName = targetBoneName;
-    
+
     return boneLocation;
 }
 
@@ -242,16 +256,16 @@ SDK::FVector TargetSelector::GetTargetAimPoint(SDK::AActor* targetActor) {
 float TargetSelector::CalculateTargetPriority(const TargetInfo& target, const SDK::FVector& playerPos) {
     // Priority calculation: closer to crosshair = higher priority
     // We can also factor in distance, but FOV distance is more important for aimbot
-    
+
     float fovWeight = 1.0f;
     float distanceWeight = 0.3f;
-    
+
     // Bonus for having bone-based targeting
     float boneTargetBonus = target.hasBoneTarget ? -10.0f : 0.0f; // Negative score is better
-    
+
     // Normalize distance (closer targets get lower scores)
     float normalizedDistance = target.distance / Cheat::Config::Aimbot::maxDistance;
-    
+
     float finalScore = target.fovDistance * fovWeight + normalizedDistance * distanceWeight + boneTargetBonus;
 
     return finalScore;
