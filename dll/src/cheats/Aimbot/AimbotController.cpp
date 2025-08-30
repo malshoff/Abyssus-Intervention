@@ -223,6 +223,8 @@ void AimbotController::ProcessAiming(SDK::UWorld *world,
             playerController->GetActorEyesViewPoint(&cameraPos, &cameraRot);
         }
 
+        auto screenCenter = Math::GetScreenCenter(playerController);
+
         // Apply user-configurable vertical offset (world Z axis)
         targetPosition.Z += Cheat::Config::Aimbot::aimVerticalOffset;
         SDK::FRotator targetRotation = Math::CalculateLookAtRotation(cameraPos, targetPosition);

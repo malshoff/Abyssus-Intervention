@@ -148,12 +148,19 @@ LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     switch (uMsg)
     {
     case WM_SIZE:
-        if (wParam == SIZE_MINIMIZED) g_AppMinimized = true; else g_AppMinimized = false;
+        if (wParam == SIZE_MINIMIZED)
+            g_AppMinimized = true;
+        else
+            g_AppMinimized = false;
         break;
     case WM_ACTIVATEAPP:
-        if (wParam == FALSE) g_AppMinimized = true; else g_AppMinimized = false;
+        if (wParam == FALSE)
+            g_AppMinimized = true;
+        else
+            g_AppMinimized = false;
         break;
-    default: break;
+    default:
+        break;
     }
 
     // Let ImGui process first
@@ -165,13 +172,18 @@ LRESULT APIENTRY WndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     {
         switch (uMsg)
         {
-        case WM_LBUTTONDOWN: case WM_LBUTTONUP:
-        case WM_RBUTTONDOWN: case WM_RBUTTONUP:
-        case WM_MBUTTONDOWN: case WM_MBUTTONUP:
-        case WM_MOUSEWHEEL: case WM_MOUSEHWHEEL:
+        case WM_LBUTTONDOWN:
+        case WM_LBUTTONUP:
+        case WM_RBUTTONDOWN:
+        case WM_RBUTTONUP:
+        case WM_MBUTTONDOWN:
+        case WM_MBUTTONUP:
+        case WM_MOUSEWHEEL:
+        case WM_MOUSEHWHEEL:
         case WM_MOUSEMOVE:
             return true;
-        default: break;
+        default:
+            break;
         }
     }
 
@@ -199,15 +211,15 @@ void InitImGui()
         // Base UI font
         ImFontConfig baseCfg;
         baseCfg.FontDataOwnedByAtlas = false;
-        io.Fonts->AddFontFromMemoryTTF((void*)tahoma, sizeof(tahoma), 16.0f, &baseCfg);
+        io.Fonts->AddFontFromMemoryTTF((void *)tahoma, sizeof(tahoma), 16.0f, &baseCfg);
 
         // Merge Font Awesome icons into the atlas
-        static const ImWchar icon_ranges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };
+        static const ImWchar icon_ranges[] = {ICON_MIN_FA, ICON_MAX_FA, 0};
         ImFontConfig iconCfg;
         iconCfg.MergeMode = true;
         iconCfg.PixelSnapH = true;
         iconCfg.FontDataOwnedByAtlas = false;
-        io.Fonts->AddFontFromMemoryTTF((void*)fa_solid_900, sizeof(fa_solid_900), 16.0f, &iconCfg, icon_ranges);
+        io.Fonts->AddFontFromMemoryTTF((void *)fa_solid_900, sizeof(fa_solid_900), 16.0f, &iconCfg, icon_ranges);
 
         io.Fonts->Build();
         ImGui_ImplDX12_CreateDeviceObjects();
@@ -313,7 +325,7 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
         return oPresent(pSwapChain, SyncInterval, Flags);
     }
 
-       // Check all required objects
+    // Check all required objects
     if (!g_pd3dCommandQueue || !g_pd3dDevice || !g_frameContext || !g_pd3dSrvDescHeap)
         return oPresent(pSwapChain, SyncInterval, Flags);
 
@@ -343,13 +355,16 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     ImGui::NewFrame();
 
     // Ensure ImGui captures mouse/keyboard when hovering widgets
-    ImGuiIO& io = ImGui::GetIO();
+    ImGuiIO &io = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_NoMouseCursorChange; // prevent system cursor flicker on exit
     io.MouseDrawCursor = CheatMenu::IsVisible();
 
     // Render menu
     CheatMenu::Render();
+
+    // Cheat system main loop (runs every frame)
+    Cheat::Core::CheatMain::Update(GetTickCount());
 
     // Get current back buffer
     UINT backBufferIdx = g_pSwapChain->GetCurrentBackBufferIndex();
@@ -377,9 +392,6 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
     ImGui::Render();
     ImGui_ImplDX12_RenderDrawData(ImGui::GetDrawData(), g_pd3dCommandList);
 
-    // Cheat system main loop (runs every frame)
-    Cheat::Core::CheatMain::Update(GetTickCount());
-
     // Return resource to present state
     barrier.Transition.StateBefore = D3D12_RESOURCE_STATE_RENDER_TARGET;
     barrier.Transition.StateAfter = D3D12_RESOURCE_STATE_PRESENT;
@@ -388,7 +400,6 @@ HRESULT __fastcall hkPresent(IDXGISwapChain3 *pSwapChain, UINT SyncInterval, UIN
 
     // Execute command list
     g_pd3dCommandQueue->ExecuteCommandLists(1, reinterpret_cast<ID3D12CommandList *const *>(&g_pd3dCommandList));
-
 
     return oPresent(pSwapChain, SyncInterval, Flags);
 }
