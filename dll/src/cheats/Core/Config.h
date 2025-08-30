@@ -116,17 +116,18 @@ namespace Cheat {
 
         // =============================================================================
         // VISUALS (ESP etc.)
+
+        namespace Debug {
+            extern bool enableMathLogging;
+            // For debug-aiming: user-selected bone name on local player to use as aim origin
+            extern std::string playerAimOriginBone; // empty = auto (head)
+        }
+
         // =============================================================================
         namespace Visuals {
             extern bool ESPEnabled;
         }
 
-        // =============================================================================
-        // DEBUG SETTINGS
-        // =============================================================================
-        namespace Debug {
-            extern bool enableMathLogging;   // Enable detailed math function logging
-        }
 
         // =============================================================================
         // FEATURE FLAGS

@@ -67,6 +67,11 @@ namespace Cheat {
             bool ESPEnabled = true;
         }
 
+        namespace Debug {
+            bool enableMathLogging = false; // existing extern
+            std::string playerAimOriginBone; // empty by default
+        }
+
         // =============================================================================
         // FEATURE FLAGS - Define once here
         // =============================================================================
@@ -113,12 +118,6 @@ namespace Cheat {
             float RateOfFireValue = 0.0f;      // will be clamped between Min..Max at apply-time
         }
 
-        // =============================================================================
-        // DEBUG SETTINGS - Define once here
-        // =============================================================================
-        namespace Debug {
-            bool enableMathLogging = false;   // Enable detailed math function logging
-        }
     }
 }
 

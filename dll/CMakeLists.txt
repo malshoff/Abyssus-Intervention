@@ -58,6 +58,8 @@ add_library(${DLL_NAME} SHARED
     src/cheats/Services/ESPService.cpp
 
     # GUI
+    src/cheats/Services/PlayerBoneService.cpp
+
     src/gui/CheatMenu.cpp
         src/gui/Tabs/AimbotTab.cpp
         src/gui/Tabs/WeaponsTab.cpp
