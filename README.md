@@ -1,12 +1,12 @@
 [![CMake on Windows](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook/actions/workflows/cmake-single-platform.yml)
 
-# ImGui DirectX12 Kiero Hook
+# Abyssus
 
-A DirectX 12 hook implementation using ImGui and Kiero. This project allows you to inject custom ImGui interfaces into DirectX 12 applications.
+A UE5 hack for the single-player game Abyssus. Supports DX12 (via [chadlrnsn's DX12 hook](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook) ) and DX11 via my own implementation.
 
 ## Features
 
-- DirectX 12 Hook implementation
+- DirectX 11/12 Hook implementation
 - ImGui integration through Kiero
 - Resizable window support
 - Fullscreen support
