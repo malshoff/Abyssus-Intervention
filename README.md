@@ -71,16 +71,10 @@ The DLL will be in the `bin/{Debug|Release}` directory.
 [!NOTE]
 Only x64 builds are supported due to DirectX 12 limitations.
 
-## Known Issues
-
-- Debug builds with debug layers enabled might crash
-- Minor flickering may occur
-- Menu freezes when switching to fullscreen (Alt+Enter) while menu is open
-
 ## Implementation Details
 
 This project uses:
-
+- [chadlrnsn's DX12 hook](https://github.com/chadlrnsn/ImGui-DirectX-12-Kiero-Hook) as a DX12 base
 - [Kiero](https://github.com/Rebzzel/kiero) for function hooking
 - [Dear ImGui](https://github.com/ocornut/imgui) for the user interface
 - [MinHook](https://github.com/TsudaKageyu/minhook) for API hooking
